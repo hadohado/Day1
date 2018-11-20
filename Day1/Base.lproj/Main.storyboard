@@ -103,9 +103,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Jpe-eb-iQE">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Xvz-7S-QM2">
+                                    <rect key="frame" x="0.0" y="30" width="375" height="60"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sec-1j-vCJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="60"/>
+                                            <state key="normal" image="whiteCamera"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmJ-Ed-P75">
+                                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="60"/>
+                                            <state key="normal" image="add"/>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.43255027778475807" green="1" blue="0.88043390143825218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="Xvz-7S-QM2" firstAttribute="leading" secondItem="Jpe-eb-iQE" secondAttribute="leading" id="2tD-7i-Aa9"/>
+                                <constraint firstAttribute="bottom" secondItem="Xvz-7S-QM2" secondAttribute="bottom" constant="30" id="3a1-2I-n8o"/>
+                                <constraint firstAttribute="trailing" secondItem="Xvz-7S-QM2" secondAttribute="trailing" id="cga-17-F6s"/>
+                                <constraint firstItem="Xvz-7S-QM2" firstAttribute="top" secondItem="Jpe-eb-iQE" secondAttribute="top" constant="30" id="rOq-3c-N61"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="RON-ag-EPM">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="148" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RON-ag-EPM" id="s6E-7w-QvW">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -119,10 +145,15 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="HL4-La-ti3"/>
+                    <connections>
+                        <outlet property="whiteCamera2Button" destination="Sec-1j-vCJ" id="7SK-Dk-g5N"/>
+                        <outlet property="whiteCameraButton" destination="Xvz-7S-QM2" id="KkE-h5-6hM"/>
+                        <outlet property="whitePlusButton" destination="wmJ-Ed-P75" id="gQe-Hx-tNh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z4x-dH-h4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2002" y="-313"/>
+            <point key="canvasLocation" x="2000.8" y="-313.49325337331339"/>
         </scene>
         <!--Create Journal View Controller-->
         <scene sceneID="07O-si-z9X">
@@ -153,4 +184,8 @@
             <point key="canvasLocation" x="-479" y="24"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add" width="204.80000305175781" height="204.80000305175781"/>
+        <image name="whiteCamera" width="204.80000305175781" height="204.80000305175781"/>
+    </resources>
 </document>
